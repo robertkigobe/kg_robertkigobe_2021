@@ -1,7 +1,18 @@
-'use strict';
 
-// Array of input
-const numbers = [3,25,209];
+
+//Function to accept arguments from the command line
+function ParseArguments() {  
+   var input = [];  
+   var arguments = process.argv;  
+   arguments.slice(2).forEach(function(num) {  
+       input.push(num);  
+   });  
+   return input;  
+} 
+
+// Array of inputs
+const numbers = ParseArguments();  
+
 // Array of string represntation
 const stringNumbers = [];
 
